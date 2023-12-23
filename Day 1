@@ -1,1 +1,5 @@
-
+for x in range(1101):
+    if x==77 or x==86 or x==32:
+        continue
+    else:
+        print(x)
