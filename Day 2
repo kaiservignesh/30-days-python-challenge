@@ -1,1 +1,14 @@
+import itertools
 
+word = "abc"
+
+per1 = itertools.permutations(word,1)
+per2 = itertools.permutations(word,2)
+per3 = itertools.permutations(word,3)
+
+for val in per1:
+    print(*val)
+for val in per2:
+    print(*val)
+for val in per3:
+    print(*val)
