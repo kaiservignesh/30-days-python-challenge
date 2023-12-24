@@ -1,0 +1,13 @@
+import time
+
+timenow = time.localtime()
+current_time = time.strftime("%H:%M:%S", timenow)
+print(current_time)
+if timenow.tm_hour > 5 and timenow.tm_hour < 12:
+    print("Good Morning")
+if timenow.tm_hour > 12 and timenow.tm_hour < 16:
+    print("Good Afternoon")
+if timenow.tm_hour > 16 and timenow.tm_hour < 22:
+    print("Good Evening")
+if timenow.tm_hour > 22 and timenow.tm_hour < 5:
+    print("Good Night")
