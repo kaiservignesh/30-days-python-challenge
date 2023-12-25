@@ -1,0 +1,13 @@
+i=0
+names=[]
+while i==0:
+    friend_name=input("Enter your friend's name(if you finish, type 'exit'):")
+    if friend_name=="exit":
+        i=1
+    else:
+        names.append(friend_name)
+for x in range(len(names)):
+    if x!=len(names)-1:
+        print(names[x],end=",")
+    else:
+        print(names[x],end=". We are all together and spread love")
