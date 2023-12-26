@@ -1,0 +1,3 @@
+km_ride=input('Enter the number of kilometers you travelled: ')
+petrolspend=int(int(km_ride)/30)
+print('Number liters petrol spend: '+str(petrolspend))
