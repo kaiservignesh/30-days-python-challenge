@@ -1,0 +1,13 @@
+i=0
+goals=[]
+while i==0:
+    goal_details=input("Enter your 2024 goals (if you finish, type 'exit'):")
+    if goal_details=="exit":
+        i=1
+    else:
+        goals.append(goal_details)
+        
+
+newval =sorted(goals,key=str.lower)
+for x in newval:
+    print(x)
