@@ -1,0 +1,21 @@
+i=0
+jobs=[]
+while i==0:
+    job_details=input("Enter all jobs related to python (if you finish, type 'exit'):")
+    if job_details=="exit":
+        i=1
+    else:
+        jobs.append(job_details)
+        
+print(str(jobs))
+
+job_interest=input("Enter your job interest: ")
+
+for x in jobs[:]:
+     if x!=job_interest:
+        jobs.remove(x)
+        
+if len(jobs)>0:
+    print(str(jobs))
+else:
+    print("Select job from the list")
