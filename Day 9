@@ -1,0 +1,35 @@
+from datetime import datetime
+def timeconvert(timeinput):
+    t_obj = datetime.strptime(timeinput, '%H:%M %p')
+    t_am_pm = t_obj.strftime('%I:%M %p')
+    return t_am_pm
+
+
+
+
+timeinput = input("Enter time in HH:MM AM/PM\n")
+
+
+classtable={"09:00 AM - 10:00 AM":"English",
+"10:01 AM - 11:00 AM":"Maths",
+"11:01 AM - 12:00 PM":"Tamil",
+"12:01 PM - 01:00 PM":"Lunch Break",
+"01:01 PM - 02:00 PM":"Social",
+"02:01 PM - 03:00 PM":"Science",
+"03:01 PM - 04:00 PM":"LAB"
+}
+
+classfound=0
+for x,y in classtable.items():
+    classstart,classend=x.split(' - ')
+    classstart=timeconvert(classstart)
+    classend=timeconvert(classend)
+    inputtime=timeconvert(timeinput)
+    if classstart <=  inputtime <= classend:
+        print(y)
+        classfound=1
+
+
+
+if classfound==0:
+    print("No subject found")
