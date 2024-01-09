@@ -1,0 +1,22 @@
+import re 
+para="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At quis risus sed vulputate odio. Consectetur libero id faucibus nisl tincidunt eget nullam non. In fermentum posuere urna nec tincidunt. Egestas sed sed risus pretium quam vulputate dignissim. Diam sit amet nisl suscipit. Aliquam sem fringilla ut morbi. Sed sed risus pretium quam."
+
+
+para_no_spl=re.sub(r'[^a-zA-Z0-9\s]+', '',para)
+para_letter=re.sub(r'\W+','',para_no_spl)
+wordcount=len(para_no_spl.split())
+lettercount=len(para_letter)
+print("Letter Count: ", lettercount)
+print("Word Count: ", wordcount)
+i=0
+check=[]
+words=para_no_spl.split()
+for x in words:
+    for y in words:      
+        if x==y:
+            i=i+1
+    if i>1 and x not in check:
+        check.append(x)
+        print(x+": "+str(i))
+    i=0
+    
