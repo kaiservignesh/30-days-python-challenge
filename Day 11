@@ -1,0 +1,7 @@
+import random
+randnum = random.randrange(1, 10)
+enterval = input("Enter the number between 1-10: ")
+if randnum==int(enterval):
+    print("You're win")
+else:
+    print("It's not correct, Please try again")
