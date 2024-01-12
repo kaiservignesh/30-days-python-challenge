@@ -1,0 +1,28 @@
+csize=int(input("Enter the train carriage size: "))
+if (csize*5)>100:
+    print("There is no place for entire trian in this station")
+    exit(0)
+cname=["S1","S2","S3","S4","S5"]
+for x in range(1,6):
+    cposition=(x-1)*csize+1
+    print(cposition)
+    if(cposition<=10):
+        print(str(cname[x-1])+"-"+"1")
+    elif(cposition<=20):
+        print(str(cname[x-1])+"-"+"2")
+    elif(cposition<=30):
+        print(str(cname[x-1])+"-"+"3")
+    elif(cposition<=40):
+        print(str(cname[x-1])+"-"+"4")
+    elif(cposition<=50):
+        print(str(cname[x-1])+"-"+"5")
+    elif(cposition<=60):
+        print(str(cname[x-1])+"-"+"6")
+    elif(cposition<=70):
+        print(str(cname[x-1])+"-"+"7")
+    elif(cposition<=80):
+        print(str(cname[x-1])+"-"+"8")
+    elif(cposition<=90):
+        print(str(cname[x-1])+"-"+"9")
+    elif(cposition<=100):
+        print(str(cname[x-1])+"-"+"10")
