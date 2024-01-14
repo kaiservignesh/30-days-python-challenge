@@ -1,0 +1,20 @@
+x=1
+tasklist=[]
+while x==1:
+    command=input("Enter your command - add,print,remove,exit: ")
+    end=1
+    if command=="add":
+        while end==1:
+            task=input("Enter your task (if you entered all your task, enter 'end'' to exit): ")
+            if task=="end":
+                end=0
+            else:
+                tasklist.append(task)
+    elif command=="print":
+          for y in range(len(tasklist)):
+              print(f"{y+1}. {tasklist[y]}")
+    elif command=="remove":
+        tasklist.clear()
+        print("All tasks removed from your list")
+    elif command=="exit":
+        x=0
