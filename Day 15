@@ -1,0 +1,6 @@
+numvals=input("Enter the number values you are going to input: ")
+listval=[]
+for x in range(int(numvals)):
+    nums=input("Enter the number: ")
+    listval.append(nums)
+print("Big number is ",max(listval),",Small number is ",min(listval))
