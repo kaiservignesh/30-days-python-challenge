@@ -1,0 +1,9 @@
+x=input("Enter the temperature in Celsius (C) or Fahrenheit (F): ")
+if x[len(x)-1]=='C':
+    fval= (9/5 * int(x.replace('C',''))) + 32
+    print(str(fval)+"F")
+elif x[len(x)-1]=='F':
+    fval= 5/9 * (int(x.replace('F','')) - 32)
+    print(str(fval)+"C")
+else:
+    print("Please enter the value with ending C or F")
