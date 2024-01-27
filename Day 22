@@ -1,0 +1,7 @@
+para=input("Enter the paragraph: ")
+wfind=input("Enter the word to remove: ")
+wreplace=input("Enter the word to replace: ")
+c=para.count(wfind)
+newpara=para.replace(wfind,wreplace)
+print(newpara)
+print("Replaced word count:",c)
