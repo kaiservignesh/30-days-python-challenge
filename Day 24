@@ -1,0 +1,7 @@
+import random
+
+val=random.random()
+if val>0.5:
+    print("Head")
+else:
+    print("Tails")
